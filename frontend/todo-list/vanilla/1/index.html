@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Simple Todo</title>
+
+  <script type="module">
+    import './js/main.js';
+  </script>
+
+  <style>
+    @import './css/main.css';
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>Todo list</h1>
+
+    <todo-app>
+      <form name="onSubmit">
+        <input autofocus todo-input placeholder="What needs to be done?" />
+      </form>
+      <ul todo-list></ul>
+
+      <div>
+        <span todo-count></span>
+      </div>
+    </todo-app>
+
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+}
+
+:focus {
+  outline: 0;
+}
+
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font: 400 24px/1.3 -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
+  letter-spacing: 1px;
+  margin: 0;
+  background: white;
+  min-height: 100%;
+  color: black;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+button,
+input {
+  background-color: transparent;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  outline: 0;
+}
+
+button {
+  padding: 0 0.8em;
+  height: 2em;
+  margin-top: auto;
+  border-radius: 0.1em;
+  cursor: pointer;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 40rem;
+}
+
+[todo-app] form {
+  width: 100%;
+}
+
+[todo-input] {
+  background: white;
+  padding: 0.5em;
+  margin: 1em 0;
+  width: 100%;
+  border: 1px solid black;
+}
+
+[todo-list] {
+  list-style: none;
+  padding: 0;
+}
+
+.complete span {
+  text-decoration: line-through;
+}
+
+[todo-list] li {
+  list-style: none;
+  position: relative;
+  border-bottom: 1px solid black;
+  padding: 0.5em;
+  padding-top: 1.2em;
+  user-select: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+[todo-list] label {
+  white-space: nowrap;
+}
+
+[todo-list] input[type='checkbox'] {
+  opacity: 0;
+  font-size: 3em;
+}
+
+[todo-list] .faux-checkbox {
+  position: absolute;
+  left: 0.5em;
+  width: 1.5em;
+  height: 1.5em;
+  border: solid 1px black;
+  margin: auto;
+  bottom: 0.4em;
+}
+
+[todo-list] .faux-checkbox:after {
+  border: 3px solid #276ef1;
+  border-top: none;
+  border-right: none;
+  content: '';
+  height: 0.5rem;
+  width: 1rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  opacity: 0;
+  bottom: 0.2em;
+  margin: auto;
+  transform: rotate(-45deg);
+}
+
+[todo-list] input[type='checkbox']:checked + .faux-checkbox:after,
+input[type='checkbox']:active + .faux-checkbox:after {
+  opacity: 1;
+}
+
+[todo-list] li button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+[todo-list] li:not(:hover) button {
+  display: none;
+}
+
+[todo-count] {
+  font-weight: 200;
+  font-size: 0.8em;
+}
